@@ -1,0 +1,46 @@
+{
+    "sourceFile": "lib/presentation/settings/settings_scope_widget.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1728660051890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1728660067270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,13 @@\n-StatefulBuilder(\r\n-  builder: (BuildContext context, setState) {\r\n-    return ;\r\n-  },\r\n-),\n\\ No newline at end of file\n+class SettingsScopeWidget extends StatefulWidget {\r\n+  const SettingsScopeWidget({super.key});\r\n+\r\n+  @override\r\n+  State<SettingsScopeWidget> createState() => _SettingsScopeWidgetState();\r\n+}\r\n+\r\n+class _SettingsScopeWidgetState extends State<SettingsScopeWidget> {\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1728660081248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'package:flutter/material.dart';\r\n+\r\n class SettingsScopeWidget extends StatefulWidget {\r\n   const SettingsScopeWidget({super.key});\r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1728660141862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import 'package:flutter/material.dart';\r\n \r\n class SettingsScopeWidget extends StatefulWidget {\r\n-  const SettingsScopeWidget({super.key});\r\n+  const SettingsScopeWidget({super.key,required this.child,});\r\n \r\n+  final Widget child;\r\n+\r\n   @override\r\n   State<SettingsScopeWidget> createState() => _SettingsScopeWidgetState();\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1728660162000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n \r\n class _SettingsScopeWidgetState extends State<SettingsScopeWidget> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container();\r\n+    return;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1728660171711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n \r\n class _SettingsScopeWidgetState extends State<SettingsScopeWidget> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return;\r\n+    return SettingsScopeWidget(child: child);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1728660188943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:tody_app/presentation/settings/settings_scope.dart';\r\n \r\n class SettingsScopeWidget extends StatefulWidget {\r\n   const SettingsScopeWidget({\r\n     super.key,\r\n@@ -14,7 +15,7 @@\n \r\n class _SettingsScopeWidgetState extends State<SettingsScopeWidget> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return SettingsScopeWidget(child: child);\r\n+    return SettingsScope;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1728660196611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,7 @@\n \r\n class _SettingsScopeWidgetState extends State<SettingsScopeWidget> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return SettingsScope;\r\n+    return SettingsScope(child: ,);\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1728660051890,
+            "name": "Commit-0",
+            "content": "StatefulBuilder(\r\n  builder: (BuildContext context, setState) {\r\n    return ;\r\n  },\r\n),"
+        }
+    ]
+}

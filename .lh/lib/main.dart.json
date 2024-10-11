@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1728539109313,
@@ -16,6 +16,46 @@
                 {
                     "date": 1728643494455,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n             ),\r\n           ),\r\n         ),\r\n       ),\r\n-      initialRoute: EnumRoutes.login.path,\r\n+      initialRoute: EnumRoutes.splash.path,\r\n       routes: {\r\n         EnumRoutes.splash.path: (context) => const SplashPage(),\r\n         EnumRoutes.onboarding.path: (context) => const OnboardingPage(),\r\n         EnumRoutes.login.path: (context) => const LoginPage(),\r\n"
+                },
+                {
+                    "date": 1728646105601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return MaterialApp(\r\n       title: 'Flutter Demo',\r\n-      themeMode: ThemeMode.dark,\r\n+      themeMode: ThemeMode.light,\r\n       theme: ThemeData(\r\n         brightness: Brightness.light,\r\n         textTheme: TextTheme(\r\n           displaySmall: AppTyphography.displaySmall.w400.copyWith(\r\n"
+                },
+                {
+                    "date": 1728646288704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n }\r\n \r\n class MyApp extends StatelessWidget {\r\n   const MyApp({super.key});\r\n+  var \r\n \r\n   // This widget is the root of your application.\r\n   @override\r\n   Widget build(BuildContext context) {\r\n"
+                },
+                {
+                    "date": 1728646316410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,18 @@\n void main() {\r\n   runApp(const MyApp());\r\n }\r\n \r\n-class MyApp extends StatelessWidget {\r\n+class MyApp extends StatefulWidget {\r\n   const MyApp({super.key});\r\n+\r\n+  @override\r\n+  State<MyApp> createState() => _MyAppState();\r\n+}\r\n+\r\n+class _MyAppState extends State<MyApp> {\r\n   var \r\n-\r\n+  \r\n   // This widget is the root of your application.\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return MaterialApp(\r\n"
+                },
+                {
+                    "date": 1728646321930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,8 @@\n \r\n class _MyAppState extends State<MyApp> {\r\n   var \r\n   \r\n-  // This widget is the root of your application.\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return MaterialApp(\r\n       title: 'Flutter Demo',\r\n"
+                },
+                {
+                    "date": 1728646331078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   State<MyApp> createState() => _MyAppState();\r\n }\r\n \r\n class _MyAppState extends State<MyApp> {\r\n-  var \r\n+  var _themeMode\r\n   \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return MaterialApp(\r\n"
+                },
+                {
+                    "date": 1728646337392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   State<MyApp> createState() => _MyAppState();\r\n }\r\n \r\n class _MyAppState extends State<MyApp> {\r\n-  var _themeMode\r\n+  var _themeMode=Th\r\n   \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return MaterialApp(\r\n"
+                },
+                {
+                    "date": 1728646352680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   State<MyApp> createState() => _MyAppState();\r\n }\r\n \r\n class _MyAppState extends State<MyApp> {\r\n-  var _themeMode=Th\r\n+  var _themeMode=ThemeMode.light\r\n   \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return MaterialApp(\r\n"
+                },
+                {
+                    "date": 1728646576199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,10 @@\n import 'package:tody_app/presentation/pages/home_page.dart';\r\n import 'package:tody_app/presentation/pages/login_page.dart';\r\n import 'package:tody_app/presentation/pages/onboarding_page.dart';\r\n import 'package:tody_app/presentation/pages/splash_page.dart';\r\n-// import 'package:tody_app/presentation/pages/splash_page.dart';\r\n-// import 'package:tody_app/test/my_page.dart';\r\n \r\n+\r\n void main() {\r\n   runApp(const MyApp());\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1728646589187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n import 'package:tody_app/presentation/pages/login_page.dart';\r\n import 'package:tody_app/presentation/pages/onboarding_page.dart';\r\n import 'package:tody_app/presentation/pages/splash_page.dart';\r\n \r\n+final themeMode\r\n void main() {\r\n   runApp(const MyApp());\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1728646595233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import 'package:tody_app/presentation/pages/login_page.dart';\r\n import 'package:tody_app/presentation/pages/onboarding_page.dart';\r\n import 'package:tody_app/presentation/pages/splash_page.dart';\r\n \r\n-final themeMode\r\n+final themeNotifier\r\n void main() {\r\n   runApp(const MyApp());\r\n }\r\n \r\n"
                 }
             ],
             "date": 1728539109313,
