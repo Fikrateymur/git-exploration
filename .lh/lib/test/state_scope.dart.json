@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/test/state_scope.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1728536989490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1728536989490,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass StateScope extends InheritedWidget {\r\n  const StateScope({\r\n    super.key,\r\n    required super.child,\r\n    required this.color,\r\n    required this.value,\r\n  });\r\n\r\n  final int value;\r\n  final Color color;\r\n\r\n  static StateScope? of(BuildContext context) {\r\n    return context.dependOnInheritedWidgetOfExactType<StateScope>();\r\n  }\r\n\r\n  @override\r\n  bool updateShouldNotify(covariant InheritedWidget oldWidget) {\r\n    return false;\r\n  }\r\n}\r\n\r\nclass StateScopeWidget extends StatefulWidget {\r\n  const StateScopeWidget({super.key, required this.child});\r\n\r\n  final Widget child;\r\n\r\n  @override\r\n  State<StateScopeWidget> createState() => StateScopeWidgetState();\r\n}\r\n\r\nclass StateScopeWidgetState extends State<StateScopeWidget> {\r\n  int _currentIndex = 0;\r\n  int value = 0;\r\n  final _colors = [\r\n    Colors.red,\r\n    Colors.green,\r\n    Colors.blue,\r\n  ];\r\n\r\n  void changeColor() {\r\n    setState(() {\r\n      _currentIndex = (_currentIndex + 1) % _colors.length;\r\n    });\r\n  }\r\n\r\n  void increaseNumber() {\r\n    setState(() {\r\n      value++;\r\n    });\r\n  }\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return StateScope(\r\n        color: _colors[_currentIndex], value: value,\r\n        child: widget.child);\r\n  }\r\n}\r\n"
+        }
+    ]
+}

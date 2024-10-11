@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tody_app/core/app_colors.dart';
 // import 'package:tody_app/core/app_typhography.dart';
@@ -18,12 +19,27 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    _chechIfAppOpenedPreviosly();
+    _checkAuth();
+  }
+
+  void _checkAuth() async {
+    const secureStorage = FlutterSecureStorage();
+    final token = await secureStorage.read(key: AppKeys.token);
+
+    if (token != null && mounted) {
+      Navigator.pushReplacementNamed(
+        context,
+        EnumRoutes.home.path,
+      );
+    } else {
+      _chechIfAppOpenedPreviosly();
+    }
   }
 
   void _chechIfAppOpenedPreviosly() async {
     final prefrences = await SharedPreferences.getInstance();
     final isAppOpened = prefrences.getBool(AppKeys.isAppOpened);
+    await Future.delayed(const Duration(seconds: 1));
 
     if (mounted) {
       if (isAppOpened == null || !isAppOpened) {

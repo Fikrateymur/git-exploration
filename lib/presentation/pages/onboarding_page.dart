@@ -55,7 +55,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             EnumRoutes.login.path,
                           );
                         }
-                        ;
                       },
                       child: Text(
                         'Get started',

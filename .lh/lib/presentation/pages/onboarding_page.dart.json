@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/presentation/pages/onboarding_page.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1728536989491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1728536989491,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:shared_preferences/shared_preferences.dart';\r\n// import 'package:tody_app/core/app_colors.dart';\r\n// import 'package:tody_app/core/app_typhography.dart';\r\nimport 'package:tody_app/core/constants/app_icons.dart';\r\nimport 'package:tody_app/core/constants/app_keys.dart';\r\nimport 'package:tody_app/core/constants/routes.dart';\r\n// import 'package:tody_app/presentation/widgets/app_action_button.dart';\r\n\r\nclass OnboardingPage extends StatefulWidget {\r\n  const OnboardingPage({super.key});\r\n\r\n  @override\r\n  State<OnboardingPage> createState() => _OnboardingPageState();\r\n}\r\n\r\nclass _OnboardingPageState extends State<OnboardingPage> {\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n      body: SafeArea(\r\n        child: Column(\r\n          children: [\r\n            Expanded(\r\n              child: Image.asset(\r\n                AppIcons.splashLogo2,\r\n                scale: 2,\r\n              ),\r\n            ),\r\n            Padding(\r\n              padding: const EdgeInsets.all(40.0),\r\n              child: Column(\r\n                children: [\r\n                  Text(\r\n                    'Welcome to\\n Uno To Do!',\r\n                    style: Theme.of(context).textTheme.displaySmall,\r\n                    textAlign: TextAlign.center,\r\n                  ),\r\n                  const SizedBox(height: 16),\r\n                  Text(\r\n                    'Start using the best To Do App',\r\n                    style: Theme.of(context).textTheme.titleMedium,\r\n                  ),\r\n                  const SizedBox(height: 80),\r\n                  SizedBox(\r\n                    width: double.infinity,\r\n                    child: ElevatedButton(\r\n                      onPressed: () async {\r\n                        final preferences =\r\n                            await SharedPreferences.getInstance();\r\n                        await preferences.setBool(AppKeys.isAppOpened, true);\r\n                        if (mounted) {\r\n                          Navigator.pushReplacementNamed(\r\n                            context,\r\n                            EnumRoutes.login.path,\r\n                          );\r\n                        }\r\n                      },\r\n                      child: Text(\r\n                        'Get started',\r\n                        style: Theme.of(context)\r\n                            .elevatedButtonTheme\r\n                            .style\r\n                            ?.textStyle\r\n                            ?.resolve(\r\n                              WidgetState.values.toSet(),\r\n                            ),\r\n                      ),\r\n                    ),\r\n                  ),\r\n                ],\r\n              ),\r\n            )\r\n          ],\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

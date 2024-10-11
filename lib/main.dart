@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tody_app/core/app_colors.dart';
 import 'package:tody_app/core/app_typhography.dart';
 import 'package:tody_app/core/constants/routes.dart';
+import 'package:tody_app/presentation/pages/home_page.dart';
 import 'package:tody_app/presentation/pages/login_page.dart';
 import 'package:tody_app/presentation/pages/onboarding_page.dart';
 import 'package:tody_app/presentation/pages/splash_page.dart';
@@ -66,6 +67,7 @@ class MyApp extends StatelessWidget {
         EnumRoutes.splash.path: (context) => const SplashPage(),
         EnumRoutes.onboarding.path: (context) => const OnboardingPage(),
         EnumRoutes.login.path: (context) => const LoginPage(),
+        EnumRoutes.home.path: (context) => const HomePage(),
       },
     );
   }

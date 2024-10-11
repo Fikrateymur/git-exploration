@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/presentation/pages/splash_page.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1728536754501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1728536759568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \r\n   void _chechIfAppOpenedPreviosly() async {\r\n     final prefrences = await SharedPreferences.getInstance();\r\n     final isAppOpened = prefrences.getBool(AppKeys.isAppOpened);\r\n-    await \r\n+    await Future\r\n \r\n     if (mounted) {\r\n       if (isAppOpened == null || !isAppOpened) {\r\n         Navigator.pushReplacementNamed(\r\n"
+                },
+                {
+                    "date": 1728536771067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \r\n   void _chechIfAppOpenedPreviosly() async {\r\n     final prefrences = await SharedPreferences.getInstance();\r\n     final isAppOpened = prefrences.getBool(AppKeys.isAppOpened);\r\n-    await Future.delayed(duration)\r\n+    await Future.delayed(const Duration())\r\n \r\n     if (mounted) {\r\n       if (isAppOpened == null || !isAppOpened) {\r\n         Navigator.pushReplacementNamed(\r\n"
+                },
+                {
+                    "date": 1728536777076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \r\n   void _chechIfAppOpenedPreviosly() async {\r\n     final prefrences = await SharedPreferences.getInstance();\r\n     final isAppOpened = prefrences.getBool(AppKeys.isAppOpened);\r\n-    await Future.delayed(const Duration())\r\n+    await Future.delayed(const Duration(seconds: 1));\r\n \r\n     if (mounted) {\r\n       if (isAppOpened == null || !isAppOpened) {\r\n         Navigator.pushReplacementNamed(\r\n"
+                }
+            ],
+            "date": 1728536754501,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:shared_preferences/shared_preferences.dart';\r\nimport 'package:tody_app/core/app_colors.dart';\r\n// import 'package:tody_app/core/app_typhography.dart';\r\nimport 'package:tody_app/core/constants/app_icons.dart';\r\nimport 'package:tody_app/core/constants/app_keys.dart';\r\nimport 'package:tody_app/core/constants/routes.dart';\r\n// import 'package:tody_app/presentation/pages/onboarding_page.dart';\r\n\r\nclass SplashPage extends StatefulWidget {\r\n  const SplashPage({super.key});\r\n\r\n  @override\r\n  State<SplashPage> createState() => _SplashPageState();\r\n}\r\n\r\nclass _SplashPageState extends State<SplashPage> {\r\n  @override\r\n  void initState() {\r\n    super.initState();\r\n    _chechIfAppOpenedPreviosly();\r\n  }\r\n\r\n  void _chechIfAppOpenedPreviosly() async {\r\n    final prefrences = await SharedPreferences.getInstance();\r\n    final isAppOpened = prefrences.getBool(AppKeys.isAppOpened);\r\n    await \r\n\r\n    if (mounted) {\r\n      if (isAppOpened == null || !isAppOpened) {\r\n        Navigator.pushReplacementNamed(\r\n          context,\r\n          EnumRoutes.onboarding.path,\r\n        );\r\n      } else {\r\n        Navigator.pushReplacementNamed(\r\n          context,\r\n          EnumRoutes.login.path,\r\n        );\r\n      }\r\n    }\r\n  }\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n      backgroundColor: DarkAppColors.surface,\r\n      body: Center(\r\n        child: Column(\r\n          mainAxisAlignment: MainAxisAlignment.center,\r\n          children: [\r\n            Image.asset(\r\n              AppIcons.splashLogo,\r\n              fit: BoxFit.cover,\r\n            ),\r\n\r\n            // const SizedBox(height: 12),\r\n            // Text(\r\n            //   'Tody App',\r\n            //   style: AppTyphography.sp26.w700.copyWith(\r\n            //     color: AppColors.neutralWhite,\r\n            //   ),\r\n            // ),\r\n            // const SizedBox(height: 12),\r\n            // Text(\r\n            //   'The best to do list application for you',\r\n            //   style: AppTyphography.sp14.w400.copyWith(\r\n            //     color: AppColors.neutralWhite,\r\n            //     height: 20 / 14,\r\n            //   ),\r\n            // ),\r\n          ],\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

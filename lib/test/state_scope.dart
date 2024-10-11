@@ -54,6 +54,6 @@ class StateScopeWidgetState extends State<StateScopeWidget> {
   @override
   Widget build(BuildContext context) {
     return StateScope(
-        child: widget.child, color: _colors[_currentIndex], value: value);
+        color: _colors[_currentIndex], value: value, child: widget.child);
   }
 }
