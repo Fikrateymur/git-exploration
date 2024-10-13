@@ -1,0 +1,34 @@
+{
+    "sourceFile": "lib/bloc/login/login_state.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1728839156200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1728839170962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n-enum LoginState {\r\n+enum LoginSt {\r\n   initial,\r\n   loading,\r\n   succues,\r\n   error,\r\n }\r\n+\r\n+class LoginState\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1728839178779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n   succues,\r\n   error,\r\n }\r\n \r\n-class LoginState\n\\ No newline at end of file\n+class LoginState{}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1728839206593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n   succues,\r\n   error,\r\n }\r\n \r\n-class LoginState {}\r\n+class LoginState {final LoginStep step}\r\n"
+                },
+                {
+                    "date": 1728839250131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n enum LoginStep {\r\n   initial,\r\n   loading,\r\n   succues,\r\n-  error,\r\n+  error\r\n }\r\n \r\n class LoginState {\r\n   final LoginStep step;\r\n"
+                }
+            ],
+            "date": 1728839156200,
+            "name": "Commit-0",
+            "content": "enum LoginState {\r\n  initial,\r\n  loading,\r\n  succues,\r\n  error,\r\n}\r\n"
+        }
+    ]
+}

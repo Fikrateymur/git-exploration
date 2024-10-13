@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:provider/provider.dart';
 import 'package:tody_app/core/constants/app_keys.dart';
 import 'package:tody_app/core/constants/routes.dart';
-import 'package:tody_app/main.dart';
+import 'package:tody_app/counter_notifier.dart';
 import 'package:tody_app/presentation/settings/settings_scope.dart';
 import 'package:tody_app/presentation/settings/settings_scope_widget.dart';
 
@@ -12,6 +13,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeMode = SettingsScope.of(context)!.themeMode;
+    // final value = context.read<String>();
 
     return Scaffold(
       appBar: AppBar(
@@ -37,6 +39,33 @@ class HomePage extends StatelessWidget {
             },
             icon: const Icon(Icons.logout),
           ),
+        ],
+      ),
+      body: Column(
+        children: [
+          Center(
+            child: Consumer<CounterNotifier>(
+              builder: (BuildContext context, notifier, _) {
+                return Text(
+                  notifier.counter.toString(),
+                  style: const TextStyle(fontSize: 40),
+                );
+              },
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(
+                onPressed: context.read<CounterNotifier>().increment,
+                child: const Text('Increment'),
+              ),
+              ElevatedButton(
+                onPressed: context.read<CounterNotifier>().decrement,
+                child: const Text('Decrement'),
+              ),
+            ],
+          )
         ],
       ),
     );

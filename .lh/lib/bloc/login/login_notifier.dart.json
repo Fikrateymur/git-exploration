@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/bloc/login/login_notifier.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1728810262329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1728810279244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import 'package:flutter/material.dart';\r\n \r\n-enum{};\r\n+enum LoginState{};\r\n \r\n class LoginNotifier extends ChangeNotifier{}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1728810302430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import 'package:flutter/material.dart';\r\n \r\n-enum LoginState{}\r\n+enum LoginState{initial,loading,succues,error,}\r\n \r\n class LoginNotifier extends ChangeNotifier{}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1728810479760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,7 @@\n   succues,\r\n   error,\r\n }\r\n \r\n-class LoginNotifier extends ChangeNotifier {}\r\n+class LoginNotifier extends ChangeNotifier {\r\n+  LoginState\r\n+}\r\n"
+                }
+            ],
+            "date": 1728810262329,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nenum{};\r\n\r\nclass LoginNotifier extends ChangeNotifier{}"
+        }
+    ]
+}
