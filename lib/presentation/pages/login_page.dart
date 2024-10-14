@@ -50,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     final loginState = context.watch<LoginNotifier>().loginState;
 
-    final border = const OutlineInputBorder(
+    const border = OutlineInputBorder(
       borderSide: BorderSide(
         color: AppColors.onPrimary,
       ),

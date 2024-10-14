@@ -17,9 +17,8 @@ class LoginNotifier extends ChangeNotifier {
     try {
       _loginState = LoadingState();
       notifyListeners();
-      await Future.delayed(const Duration(seconds: 2));
 
-      final uri = Uri.http('192.168.100.17:8080', '/auth/login');
+      final uri = Uri.http('192.168.0.107:8080', '/auth/login');
       final response = await http.post(
         uri,
         body: jsonEncode(
@@ -36,7 +35,9 @@ class LoginNotifier extends ChangeNotifier {
         notifyListeners();
       } else {
         final error = response.body;
-        _loginState = ErrorState(error);
+        if (_loginState != ErrorState(error)) {
+          _loginState = ErrorState(error);
+        }
         notifyListeners();
       }
     } catch (e) {

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/presentation/pages/home/widgets/dynamic_category_item.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1728918867547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1728918902461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:tody_app/presentation/pages/home/widgets/category_item.dart';\r\n \r\n-class DynamicCategoryItem extends StatelessWidget {\r\n-  const DynamicCategoryItem({super.key});\r\n-\r\n-  @override\r\n-  Widget build(BuildContext context) {\r\n-    return Container();\r\n-  }\r\n+class DynamicCategoryItem extends CategoryItem{\r\n+  DynamicCategoryItem({required super.prefix, required super.title});\r\n }\r\n"
+                },
+                {
+                    "date": 1728919801279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,53 @@\n import 'package:flutter/material.dart';\r\n import 'package:tody_app/presentation/pages/home/widgets/category_item.dart';\r\n \r\n-class DynamicCategoryItem extends CategoryItem {\r\n-  DynamicCategoryItem({\r\n-    required super.prefix,\r\n+class StaticCategoryItem extends CategoryItem {\r\n+  const StaticCategoryItem({\r\n+    super.key,\r\n+    required this.prefix,\r\n     required super.title,\r\n+    super.onTap,\r\n   });\r\n+\r\n+  final Widget prefix;\r\n+\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return InkWell(\r\n+      onTap: onTap,\r\n+      child: Padding(\r\n+        padding: const EdgeInsets.only(\r\n+          left: 20,\r\n+          right: 15,\r\n+          top: 8,\r\n+          bottom: 8,\r\n+        ),\r\n+        child: Row(\r\n+          children: [\r\n+            Expanded(\r\n+              child: Row(\r\n+                children: [\r\n+                  prefix,\r\n+                  const SizedBox(width: 16),\r\n+                  Expanded(\r\n+                    child: Text(\r\n+                      title,\r\n+                      style: Theme.of(context).textTheme.bodyLarge,\r\n+                    ),\r\n+                  ),\r\n+                ],\r\n+              ),\r\n+            ),\r\n+            Icon(\r\n+              Icons.chevron_right,\r\n+              color: Theme.of(context).select(\r\n+                light: AppColors.onSurfaceMediumBrush,\r\n+                dark: DarkAppColors.onSurfaceMediumBrush,\r\n+              ),\r\n+            ),\r\n+          ],\r\n+        ),\r\n+      ),\r\n+    );\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1728919822991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:tody_app/presentation/pages/home/widgets/category_item.dart';\r\n \r\n-class StaticCategoryItem extends CategoryItem {\r\n-  const StaticCategoryItem({\r\n+class DynamicCategoryItem extends CategoryItem {\r\n+  const DynamicCategoryItem({\r\n     super.key,\r\n     required this.prefix,\r\n     required super.title,\r\n     super.onTap,\r\n"
+                }
+            ],
+            "date": 1728918867546,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass DynamicCategoryItem extends StatelessWidget {\r\n  const DynamicCategoryItem({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container();\r\n  }\r\n}"
+        }
+    ]
+}

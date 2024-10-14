@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/presentation/pages/home/home_page.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1728889379263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1728889396792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,8 @@\n import 'package:flutter/material.dart';\r\n-import 'package:flutter_secure_storage/flutter_secure_storage.dart';\r\n import 'package:provider/provider.dart';\r\n-import 'package:tody_app/core/constants/app_keys.dart';\r\n-import 'package:tody_app/core/constants/routes.dart';\r\n import 'package:tody_app/counter_notifier.dart';\r\n import 'package:tody_app/presentation/settings/settings_scope.dart';\r\n-import 'package:tody_app/presentation/settings/settings_scope_widget.dart';\r\n \r\n class HomePage extends StatelessWidget {\r\n   const HomePage({super.key});\r\n \r\n"
+                },
+                {
+                    "date": 1728889467942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,34 +11,8 @@\n     final themeMode = SettingsScope.of(context)!.themeMode;\r\n     // final value = context.read<String>();\r\n \r\n     return Scaffold(\r\n-      body: Column(\r\n-        children: [\r\n-          Center(\r\n-            child: Consumer<CounterNotifier>(\r\n-              builder: (BuildContext context, notifier, _) {\r\n-                return Text(\r\n-                  notifier.counter.toString(),\r\n-                  style: const TextStyle(fontSize: 40),\r\n-                );\r\n-              },\r\n-            ),\r\n-          ),\r\n-          Row(\r\n-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,\r\n-            children: [\r\n-              ElevatedButton(\r\n-                onPressed: context.read<CounterNotifier>().increment,\r\n-                child: const Text('Increment'),\r\n-              ),\r\n-              ElevatedButton(\r\n-                onPressed: context.read<CounterNotifier>().decrement,\r\n-                child: const Text('Decrement'),\r\n-              ),\r\n-            ],\r\n-          )\r\n-        ],\r\n-      ),\r\n+      \r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1728889474788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n import 'package:flutter/material.dart';\r\n-import 'package:provider/provider.dart';\r\n-import 'package:tody_app/counter_notifier.dart';\r\n import 'package:tody_app/presentation/settings/settings_scope.dart';\r\n \r\n class HomePage extends StatelessWidget {\r\n   const HomePage({super.key});\r\n"
+                }
+            ],
+            "date": 1728889379263,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:flutter_secure_storage/flutter_secure_storage.dart';\r\nimport 'package:provider/provider.dart';\r\nimport 'package:tody_app/core/constants/app_keys.dart';\r\nimport 'package:tody_app/core/constants/routes.dart';\r\nimport 'package:tody_app/counter_notifier.dart';\r\nimport 'package:tody_app/presentation/settings/settings_scope.dart';\r\nimport 'package:tody_app/presentation/settings/settings_scope_widget.dart';\r\n\r\nclass HomePage extends StatelessWidget {\r\n  const HomePage({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    final themeMode = SettingsScope.of(context)!.themeMode;\r\n    // final value = context.read<String>();\r\n\r\n    return Scaffold(\r\n     \r\n      body: Column(\r\n        children: [\r\n          Center(\r\n            child: Consumer<CounterNotifier>(\r\n              builder: (BuildContext context, notifier, _) {\r\n                return Text(\r\n                  notifier.counter.toString(),\r\n                  style: const TextStyle(fontSize: 40),\r\n                );\r\n              },\r\n            ),\r\n          ),\r\n          Row(\r\n            mainAxisAlignment: MainAxisAlignment.spaceEvenly,\r\n            children: [\r\n              ElevatedButton(\r\n                onPressed: context.read<CounterNotifier>().increment,\r\n                child: const Text('Increment'),\r\n              ),\r\n              ElevatedButton(\r\n                onPressed: context.read<CounterNotifier>().decrement,\r\n                child: const Text('Decrement'),\r\n              ),\r\n            ],\r\n          )\r\n        ],\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

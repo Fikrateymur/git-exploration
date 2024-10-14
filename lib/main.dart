@@ -1,4 +1,7 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tody_app/bloc/login/login_notifier.dart';
@@ -6,7 +9,7 @@ import 'package:tody_app/core/app_colors.dart';
 import 'package:tody_app/core/app_typhography.dart';
 import 'package:tody_app/core/constants/routes.dart';
 import 'package:tody_app/counter_notifier.dart';
-import 'package:tody_app/presentation/pages/home_page.dart';
+import 'package:tody_app/presentation/pages/home/home_page.dart';
 import 'package:tody_app/presentation/pages/login_page.dart';
 import 'package:tody_app/presentation/pages/onboarding_page.dart';
 import 'package:tody_app/presentation/pages/splash_page.dart';
@@ -18,10 +21,17 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final preferences = await SharedPreferences.getInstance();
 
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
+
   runApp(
-    SettingsScopeWidget(
-      preferences: preferences,
-      child: const MyApp(),
+    DevicePreview(
+      enabled: true,
+      builder: (context) => SettingsScopeWidget(
+        preferences: preferences,
+        child: const MyApp(),
+      ),
     ),
   );
 }
@@ -52,6 +62,9 @@ class _MyAppState extends State<MyApp> {
                 titleMedium: AppTyphography.titleMedium.w500.copyWith(
                   color: AppColors.pimaryVariant,
                 ),
+                bodyLarge: AppTyphography.titleMedium.w500.copyWith(
+                  color: AppColors.onSurface,
+                ),
               ),
               scaffoldBackgroundColor: AppColors.surface,
               elevatedButtonTheme: ElevatedButtonThemeData(
@@ -72,6 +85,9 @@ class _MyAppState extends State<MyApp> {
                 titleMedium: AppTyphography.titleMedium.w500.copyWith(
                   color: DarkAppColors.pimaryVariant,
                 ),
+                bodyLarge: AppTyphography.titleMedium.w500.copyWith(
+                  color: DarkAppColors.onSurface,
+                ),
               ),
               scaffoldBackgroundColor: DarkAppColors.surface,
               elevatedButtonTheme: ElevatedButtonThemeData(
@@ -84,6 +100,13 @@ class _MyAppState extends State<MyApp> {
               ),
             ),
             initialRoute: EnumRoutes.splash.path,
+            builder: (context, child) {
+              return MediaQuery.withClampedTextScaling(
+                child: child!,
+                minScaleFactor: 1.0,
+                maxScaleFactor: 1.3,
+              );
+            },
             routes: {
               EnumRoutes.splash.path: (context) => const SplashPage(),
               EnumRoutes.onboarding.path: (context) => const OnboardingPage(),

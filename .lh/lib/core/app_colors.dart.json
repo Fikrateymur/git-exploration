@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/core/app_colors.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1728916586350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1728916612531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   static const primary = Color(0xFF5946D2);\r\n   static const onPrimary = Colors.white;\r\n   static const onSurface = Color(0xFF1C1B1F);\r\n   static const pimaryVariant = Color(0xFF5835E5);\r\n-  static const error = Color(0xFF5835E5);\r\n+  static const error = Color(0xFF585977);\r\n }\r\n \r\n class DarkAppColors {\r\n   // Surface color\r\n"
+                },
+                {
+                    "date": 1728916629494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   static const primary = Color(0xFF5946D2);\r\n   static const onPrimary = Colors.white;\r\n   static const onSurface = Color(0xFF1C1B1F);\r\n   static const pimaryVariant = Color(0xFF5835E5);\r\n-  static const error = Color(0xFF585977);\r\n+  static const error = Color(0xFFF85977);\r\n }\r\n \r\n class DarkAppColors {\r\n   // Surface color\r\n"
+                }
+            ],
+            "date": 1728916586350,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n// import 'package:flutter/widgets.dart';\r\n\r\nclass AppColors {\r\n  // Surface color\r\n  static const surface = Colors.white;\r\n  static const primary = Color(0xFF5946D2);\r\n  static const onPrimary = Colors.white;\r\n  static const onSurface = Color(0xFF1C1B1F);\r\n  static const pimaryVariant = Color(0xFF5835E5);\r\n  static const error=Color(0xFF5835E5)\r\n}\r\n\r\nclass DarkAppColors {\r\n  // Surface color\r\n  static const surface = Color(0xFF201F24);\r\n  static const primary = Color(0xFF9373FF);\r\n  static const onPrimary = Colors.white;\r\n  static const onSurface = Color(0xFFE6E1E5);\r\n  static const pimaryVariant = Color(0xFFCBBEFF);\r\n}\r\n"
+        }
+    ]
+}

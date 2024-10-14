@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/core/app_typhography.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1728912681295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1728912681295,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass AppTyphography {\r\n  static const String fontFamily = 'SF Pro Display';\r\n\r\n  static const labelLarge = TextStyle(\r\n    fontSize: 14,\r\n    height: 20 / 14,\r\n  );\r\n\r\n  static const displaySmall = TextStyle(\r\n    fontSize: 36,\r\n    height: 44 / 36,\r\n  );\r\n\r\n  static const titleMedium = TextStyle(\r\n    fontSize: 16,\r\n    height: 24 / 16,\r\n  );\r\n\r\n   static const bodyLarge = TextStyle(\r\n    fontSize: 16,\r\n    height: 24 / 16,\r\n  );\r\n}\r\n\r\nextension TextStyleExt on TextStyle {\r\n  TextStyle get w700 => copyWith(fontWeight: FontWeight.w700);\r\n  TextStyle get w600 => copyWith(fontWeight: FontWeight.w600);\r\n  TextStyle get w500 => copyWith(fontWeight: FontWeight.w500);\r\n  TextStyle get w400 => copyWith(fontWeight: FontWeight.w400);\r\n}\r\n"
+        }
+    ]
+}
