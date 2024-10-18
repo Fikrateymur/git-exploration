@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/core/theme/app_theme.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1729009635762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1729009635762,
+            "name": "Commit-0",
+            "content": "import 'package:tody_app/core/theme/app_colors.dart';\r\nimport 'package:tody_app/core/theme/app_typography.dart';\r\n\r\nfinal class AppTheme {\r\n  const AppTheme({\r\n    required this.colors,\r\n    required this.typography,\r\n  });\r\n\r\n  final AppColors colors;\r\n  final AppTypography typography;\r\n}\r\n"
+        }
+    ]
+}

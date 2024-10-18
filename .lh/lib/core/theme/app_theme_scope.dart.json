@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/core/theme/app_theme_scope.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1729009635762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729074447696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n   static AppThemeScope? of(BuildContext context) {\r\n     final AppThemeScope? result =\r\n         context.dependOnInheritedWidgetOfExactType<AppThemeScope>();\r\n-    assert(result != null, 'No AppThemeScope found in context');\r\n+    // assert(result != null, 'No AppThemeScope found in context');\r\n     return result!;\r\n   }\r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1729074484000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n   static AppThemeScope? of(BuildContext context) {\r\n     final AppThemeScope? result =\r\n         context.dependOnInheritedWidgetOfExactType<AppThemeScope>();\r\n-    // assert(result != null, 'No AppThemeScope found in context');\r\n+    assert(result != null, 'No AppThemeScope found in context');\r\n     return result!;\r\n   }\r\n \r\n   @override\r\n"
+                }
+            ],
+            "date": 1729009635762,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/widgets.dart';\r\nimport 'package:tody_app/core/theme/app_theme.dart';\r\n\r\nclass AppThemeScope extends InheritedWidget {\r\n  const AppThemeScope({\r\n    super.key,\r\n    required super.child,\r\n    required this.theme,\r\n  });\r\n\r\n  final AppTheme theme;\r\n\r\n  static AppThemeScope? of(BuildContext context) {\r\n    final AppThemeScope? result =\r\n        context.dependOnInheritedWidgetOfExactType<AppThemeScope>();\r\n    assert(result != null, 'No AppThemeScope found in context');\r\n    return result!;\r\n  }\r\n\r\n  @override\r\n  bool updateShouldNotify(AppThemeScope oldWidget) => true;\r\n}\r\n"
+        }
+    ]
+}

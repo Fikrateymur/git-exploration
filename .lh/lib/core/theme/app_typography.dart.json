@@ -1,0 +1,50 @@
+{
+    "sourceFile": "lib/core/theme/app_typography.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1729147964818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729147982639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,10 @@\n \r\n   ///title\r\n   final TextStyle titleMedium;\r\n \r\n-  //\r\n+  //titleLarge\r\n+  final TextStyle\r\n \r\n   ///body\r\n   final TextStyle bodyLarge;\r\n }\r\n"
+                },
+                {
+                    "date": 1729147995228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   ///title\r\n   final TextStyle titleMedium;\r\n \r\n   //titleLarge\r\n-  final TextStyle\r\n+  final TextStyle titleLarge;\r\n \r\n   ///body\r\n   final TextStyle bodyLarge;\r\n }\r\n"
+                },
+                {
+                    "date": 1729148012286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n     required this.bodyLarge,\r\n     required this.displaySmall,\r\n     required this.labelLarge,\r\n     required this.titleMedium,\r\n+        required this.titleLarge,\r\n+\r\n   });\r\n \r\n   factory AppTypography.regular() => _AppRegularTypography();\r\n \r\n"
+                },
+                {
+                    "date": 1729148172760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,14 @@\n   TextStyle get titleMedium => const TextStyle(\r\n         fontSize: 16,\r\n         height: 24 / 16,\r\n       );\r\n+\r\n+        @override\r\n+  TextStyle get titleLarge => const TextStyle(\r\n+        fontSize: 22,\r\n+        height: 28 / 22,\r\n+      );\r\n }\r\n \r\n extension TextStyleExt on TextStyle {\r\n   TextStyle get w700 => copyWith(fontWeight: FontWeight.w700);\r\n"
+                },
+                {
+                    "date": 1729149718902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,8 +56,14 @@\n   TextStyle get titleLarge => const TextStyle(\r\n         fontSize: 22,\r\n         height: 28 / 22,\r\n       );\r\n+\r\n+        @override\r\n+  TextStyle get bodySmall => const TextStyle(\r\n+        fontSize: 22,\r\n+        height: 28 / 22,\r\n+      );\r\n }\r\n \r\n extension TextStyleExt on TextStyle {\r\n   TextStyle get w700 => copyWith(fontWeight: FontWeight.w700);\r\n"
+                },
+                {
+                    "date": 1729149748007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n   final TextStyle titleLarge;\r\n \r\n   ///body\r\n   final TextStyle bodyLarge;\r\n+  final TextStyle bodySmall;\r\n }\r\n \r\n class _AppRegularTypography implements AppTypography {\r\n   @override\r\n"
+                },
+                {
+                    "date": 1729149761123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n     required this.displaySmall,\r\n     required this.labelLarge,\r\n     required this.titleMedium,\r\n     required this.titleLarge,\r\n+    required this.bodySmall,\r\n   });\r\n \r\n   factory AppTypography.regular() => _AppRegularTypography();\r\n \r\n"
+                },
+                {
+                    "date": 1729149810615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,10 +61,10 @@\n       );\r\n \r\n   @override\r\n   TextStyle get bodySmall => const TextStyle(\r\n-        fontSize: 22,\r\n-        height: 28 / 22,\r\n+        fontSize: 12,\r\n+        height: 16 / 12,\r\n       );\r\n }\r\n \r\n extension TextStyleExt on TextStyle {\r\n"
+                }
+            ],
+            "date": 1729147964818,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\ninterface class AppTypography {\r\n  AppTypography({\r\n    required this.bodyLarge,\r\n    required this.displaySmall,\r\n    required this.labelLarge,\r\n    required this.titleMedium,\r\n  });\r\n\r\n  factory AppTypography.regular() => _AppRegularTypography();\r\n\r\n  ///label\r\n  final TextStyle labelLarge;\r\n\r\n  ///display\r\n  final TextStyle displaySmall;\r\n\r\n  ///title\r\n  final TextStyle titleMedium;\r\n\r\n  //\r\n\r\n  ///body\r\n  final TextStyle bodyLarge;\r\n}\r\n\r\nclass _AppRegularTypography implements AppTypography {\r\n  @override\r\n  TextStyle get bodyLarge => const TextStyle(\r\n        fontSize: 16,\r\n        height: 24 / 16,\r\n      );\r\n\r\n  @override\r\n  TextStyle get displaySmall => const TextStyle(\r\n        fontSize: 36,\r\n        height: 44 / 36,\r\n      );\r\n\r\n  @override\r\n  TextStyle get labelLarge => const TextStyle(\r\n        fontSize: 14,\r\n        height: 20 / 14,\r\n      );\r\n\r\n  @override\r\n  TextStyle get titleMedium => const TextStyle(\r\n        fontSize: 16,\r\n        height: 24 / 16,\r\n      );\r\n}\r\n\r\nextension TextStyleExt on TextStyle {\r\n  TextStyle get w700 => copyWith(fontWeight: FontWeight.w700);\r\n  TextStyle get w600 => copyWith(fontWeight: FontWeight.w600);\r\n  TextStyle get w500 => copyWith(fontWeight: FontWeight.w500);\r\n  TextStyle get w400 => copyWith(fontWeight: FontWeight.w400);\r\n}\r\n"
+        }
+    ]
+}

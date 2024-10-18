@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/theme/app_colors.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1728983188643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1728983224592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,10 @@\n-abstract interface class AppColors {}\r\n+abstract interface class AppColors {\r\n+   static const surface = Colors.white;\r\n+  static const primary = Color(0xFF5946D2);\r\n+  static const onPrimary = Colors.white;\r\n+  static const onSurface = Color(0xFF1C1B1F);\r\n+  static const pimaryVariant = Color(0xFF5835E5);\r\n+  static const error = Color(0xFFF85977);\r\n+  static const onSurfaceMediumBrush = Color.fromRGBO(27, 28, 31, 0.6);\r\n+  static const primaryInverse = Color(0xFFC8BFFF);\r\n+}\r\n"
+                },
+                {
+                    "date": 1728983312425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n abstract interface class AppColors {\r\n-  static const surface = Colors.white;\r\n-  static const primary = Color(0xFF5946D2);\r\n-  static const onPrimary = Colors.white;\r\n-  static const onSurface = Color(0xFF1C1B1F);\r\n-  static const pimaryVariant = Color(0xFF5835E5);\r\n-  static const error = Color(0xFFF85977);\r\n-  static const onSurfaceMediumBrush = Color.fromRGBO(27, 28, 31, 0.6);\r\n-  static const primaryInverse = Color(0xFFC8BFFF);\r\n+  static const surface;\r\n+  static const primary ;\r\n+  static const onPrimary;\r\n+  static const onSurface;\r\n+  static const pimaryVariant;\r\n+  static const error;\r\n+  static const onSurfaceMediumBrush;\r\n+  static const primaryInverse;\r\n }\r\n"
+                }
+            ],
+            "date": 1728983188643,
+            "name": "Commit-0",
+            "content": "abstract interface class"
+        }
+    ]
+}

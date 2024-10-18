@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tody_app/core/app_colors.dart';
 // import 'package:tody_app/core/app_typhography.dart';
 import 'package:tody_app/core/constants/app_icons.dart';
 import 'package:tody_app/core/constants/app_keys.dart';
 import 'package:tody_app/core/constants/routes.dart';
+import 'package:tody_app/core/theme/theme_ext.dart';
 // import 'package:tody_app/presentation/pages/onboarding_page.dart';
 
 class SplashPage extends StatefulWidget {
@@ -59,7 +59,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: DarkAppColors.surface,
+      backgroundColor: context.colors.surface,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

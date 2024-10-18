@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1728581889778,
@@ -16,6 +16,10 @@
                 {
                     "date": 1728581906222,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n enum EnumRoutes {\r\n   splash(path: '/splash'),\r\n   onboarding(path: '/onboarding'),\r\n-  login(path: '/login');\r\n+  login(path: '/login'),\r\n   home(path: '/home');\r\n \r\n \r\n   const EnumRoutes({required this.path});\r\n"
+                },
+                {
+                    "date": 1729145699376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n enum EnumRoutes {\r\n   splash(path: '/splash'),\r\n   onboarding(path: '/onboarding'),\r\n   login(path: '/login'),\r\n-  home(path: '/home');\r\n+  home(path: '/home'),\r\n+  settings(path: '/settings');\r\n \r\n   const EnumRoutes({required this.path});\r\n \r\n   final String path;\r\n"
                 }
             ],
             "date": 1728581889778,

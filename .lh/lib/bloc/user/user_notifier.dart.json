@@ -1,0 +1,46 @@
+{
+    "sourceFile": "lib/bloc/user/user_notifier.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1729260570033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729263758805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,8 @@\n \r\n     final decodedUser = jsonDecode(response.body);\r\n     final userResponse = User.fromJson(decodedUser);\r\n \r\n-    user = userResponse;\r\n+    final user = userResponse;\r\n     notifyListeners();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729263768167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,8 @@\n \r\n     final decodedUser = jsonDecode(response.body);\r\n     final userResponse = User.fromJson(decodedUser);\r\n \r\n-    final user = userResponse;\r\n+    final name user = userResponse;\r\n     notifyListeners();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729263773818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,8 @@\n \r\n     final decodedUser = jsonDecode(response.body);\r\n     final userResponse = User.fromJson(decodedUser);\r\n \r\n-    final name user = userResponse;\r\n+    final nameWords user = userResponse;\r\n     notifyListeners();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729263784146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,8 @@\n \r\n     final decodedUser = jsonDecode(response.body);\r\n     final userResponse = User.fromJson(decodedUser);\r\n \r\n-    final nameWords user = userResponse;\r\n+    final nameWords = user = userResponse;\r\n     notifyListeners();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729263798632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,10 @@\n \r\n     final decodedUser = jsonDecode(response.body);\r\n     final userResponse = User.fromJson(decodedUser);\r\n \r\n-    final nameWords = user = userResponse;\r\n+    final nameWords =userResponse.fullName.split(' ')\r\n+    \r\n+     user = userResponse;\r\n     notifyListeners();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729263806830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,8 @@\n     final decodedUser = jsonDecode(response.body);\r\n     final userResponse = User.fromJson(decodedUser);\r\n \r\n     final nameWords = userResponse.fullName.split(' ');\r\n-\r\n-    user = userResponse;\r\n+    final user = userResponse;\r\n     notifyListeners();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729263814586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,8 @@\n     final decodedUser = jsonDecode(response.body);\r\n     final userResponse = User.fromJson(decodedUser);\r\n \r\n     final nameWords = userResponse.fullName.split(' ');\r\n-    final user = userResponse;\r\n+    final  user = userResponse;\r\n     notifyListeners();\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1729260570033,
+            "name": "Commit-0",
+            "content": "import 'dart:convert';\r\n\r\nimport 'package:flutter/foundation.dart';\r\nimport 'package:flutter_secure_storage/flutter_secure_storage.dart';\r\nimport 'package:tody_app/core/constants/app_keys.dart';\r\nimport 'package:tody_app/model/user.dart';\r\nimport 'package:http/http.dart' as http;\r\n\r\nclass UserNotifier extends ChangeNotifier {\r\n  User? user;\r\n\r\n  Future<void> fetchUser() async {\r\n    final uri = Uri.http('192.168.0.107:8080', '/auth/user');\r\n\r\n    const secureStorage = FlutterSecureStorage();\r\n    final token = await secureStorage.read(key: AppKeys.token);\r\n\r\n    final response = await http.get(\r\n      uri,\r\n      headers: {\r\n        'Authorization': 'Basic $token',\r\n      },\r\n    );\r\n\r\n    final decodedUser = jsonDecode(response.body);\r\n    final userResponse = User.fromJson(decodedUser);\r\n\r\n    user = userResponse;\r\n    notifyListeners();\r\n  }\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "sourceFile": "lib/presentation/widgets/app_action_button.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1728991990101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1728991995159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import 'package:flutter/material.dart';\r\n import 'package:tody_app/core/theme/app_colors.dart';\r\n-import 'package:tody_app/core/app_typhography.dart';\r\n+import 'package:tody_app/core/theme/app_typhography.dart';\r\n \r\n class AppActionButton extends StatelessWidget {\r\n   const AppActionButton({\r\n     super.key,\r\n"
+                },
+                {
+                    "date": 1729008465995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n import 'package:flutter/material.dart';\r\n-import 'package:tody_app/core/theme/app_colors.dart';\r\n-import 'package:tody_app/core/theme/app_typhography.dart';\r\n \r\n class AppActionButton extends StatelessWidget {\r\n   const AppActionButton({\r\n     super.key,\r\n"
+                },
+                {
+                    "date": 1729008508384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,9 @@\n   // final Color? color;\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    final color = Theme.of(context).brightness == Brightness.dark\r\n-        ? DarkAppColors.primary\r\n-        : AppColors.primary;\r\n+    final color = color: context.colors.primary;\r\n \r\n     return ConstrainedBox(\r\n       constraints: const BoxConstraints(\r\n         minWidth: 150,\r\n"
+                },
+                {
+                    "date": 1729008574692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:tody_app/theme/theme_ext.dart';\r\n \r\n class AppActionButton extends StatelessWidget {\r\n   const AppActionButton({\r\n     super.key,\r\n@@ -12,9 +13,9 @@\n   // final Color? color;\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    final color = color: context.colors.primary;\r\n+    final color = context.colors.primary;\r\n \r\n     return ConstrainedBox(\r\n       constraints: const BoxConstraints(\r\n         minWidth: 150,\r\n"
+                },
+                {
+                    "date": 1729008632668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,15 +37,15 @@\n             ),\r\n             child: Center(\r\n               child: Text(\r\n                 title,\r\n-                style: AppTyphography.labelLarge.w500.copyWith(\r\n-                  color: AppColors.onPrimary,\r\n+                style: context.typography.labelLarge,\r\n+                \r\n                 ),\r\n               ),\r\n             ),\r\n           ),\r\n         ),\r\n-      ),\r\n+      \r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729008951683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,19 +13,17 @@\n   // final Color? color;\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    final color = context.colors.primary;\r\n-\r\n     return ConstrainedBox(\r\n       constraints: const BoxConstraints(\r\n         minWidth: 150,\r\n         // maxWidth: 150,\r\n         minHeight: 40,\r\n         maxHeight: 60,\r\n       ),\r\n       child: Material(\r\n-        color: color,\r\n+        color: context.colors.primary,\r\n         borderRadius: BorderRadius.circular(20),\r\n         elevation: 4.0,\r\n         child: InkWell(\r\n           borderRadius: BorderRadius.circular(20),\r\n"
+                },
+                {
+                    "date": 1729009635768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import 'package:flutter/material.dart';\r\n-import 'package:tody_app/theme/theme_ext.dart';\r\n+import 'package:tody_app/core/theme/theme_ext.dart';\r\n \r\n class AppActionButton extends StatelessWidget {\r\n   const AppActionButton({\r\n     super.key,\r\n"
+                }
+            ],
+            "date": 1728991990101,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:tody_app/core/theme/app_colors.dart';\r\nimport 'package:tody_app/core/app_typhography.dart';\r\n\r\nclass AppActionButton extends StatelessWidget {\r\n  const AppActionButton({\r\n    super.key,\r\n    required this.title,\r\n    required this.onPressed,\r\n  });\r\n\r\n  final String title;\r\n  final VoidCallback? onPressed;\r\n  // final Color? color;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    final color = Theme.of(context).brightness == Brightness.dark\r\n        ? DarkAppColors.primary\r\n        : AppColors.primary;\r\n\r\n    return ConstrainedBox(\r\n      constraints: const BoxConstraints(\r\n        minWidth: 150,\r\n        // maxWidth: 150,\r\n        minHeight: 40,\r\n        maxHeight: 60,\r\n      ),\r\n      child: Material(\r\n        color: color,\r\n        borderRadius: BorderRadius.circular(20),\r\n        elevation: 4.0,\r\n        child: InkWell(\r\n          borderRadius: BorderRadius.circular(20),\r\n          onTap: onPressed,\r\n          child: Padding(\r\n            padding: const EdgeInsets.symmetric(\r\n              vertical: 10,\r\n              horizontal: 16,\r\n            ),\r\n            child: Center(\r\n              child: Text(\r\n                title,\r\n                style: AppTyphography.labelLarge.w500.copyWith(\r\n                  color: AppColors.onPrimary,\r\n                ),\r\n              ),\r\n            ),\r\n          ),\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "sourceFile": "lib/l10n/app_az.arb",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1729078044850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729078065344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n {\r\n     \"@@locale\":\"az\",\r\n     \"important\":\"Vacib\",\r\n     \"tasks\":\"Tapsiriqlar\",\r\n-    \"light\":\"Light\",\r\n-    \"dark\":\"Dark\",\r\n+    \"light\":\"Parlaq\",\r\n+    \"dark\":\"Tund\",\r\n     \"system\":\"System\"\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1729078076932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n     \"important\":\"Vacib\",\r\n     \"tasks\":\"Tapsiriqlar\",\r\n     \"light\":\"Parlaq\",\r\n     \"dark\":\"Tund\",\r\n-    \"system\":\"System\"\r\n+    \"system\":\"Sistem\"\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1729147287042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,7 @@\n     \"important\":\"Vacib\",\r\n     \"tasks\":\"Tapsiriqlar\",\r\n     \"light\":\"Parlaq\",\r\n     \"dark\":\"Tund\",\r\n-    \"system\":\"Sistem\"\r\n+    \"system\":\"Sistem\",\r\n+    \"\"\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1729147303594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n     \"tasks\":\"Tapsiriqlar\",\r\n     \"light\":\"Parlaq\",\r\n     \"dark\":\"Tund\",\r\n     \"system\":\"Sistem\",\r\n-    \"\"\r\n+    \"settings\":\"Tenzimlemeler\"\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1729147844207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+{\r\n+    \"@@locale\":\"az\",\r\n+    \"important\":\"Vacib\",\r\n+    \"tasks\":\"Tapsiriqlar\",\r\n+    \"light\":\"Parlaq\",\r\n+    \"dark\":\"Tund\",\r\n+    \"system\":\"Sistem\",\r\n+    \"settings\":\"Ayarlar\"\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1729147853285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,14 +5,5 @@\n     \"light\":\"Parlaq\",\r\n     \"dark\":\"Tund\",\r\n     \"system\":\"Sistem\",\r\n     \"settings\":\"Ayarlar\"\r\n-}\n-{\r\n-    \"@@locale\":\"az\",\r\n-    \"important\":\"Vacib\",\r\n-    \"tasks\":\"Tapsiriqlar\",\r\n-    \"light\":\"Parlaq\",\r\n-    \"dark\":\"Tund\",\r\n-    \"system\":\"Sistem\",\r\n-    \"settings\":\"Tenzimlemeler\"\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1729078044850,
+            "name": "Commit-0",
+            "content": "{\r\n    \"@@locale\":\"az\",\r\n    \"important\":\"Vacib\",\r\n    \"tasks\":\"Tapsiriqlar\",\r\n    \"light\":\"Light\",\r\n    \"dark\":\"Dark\",\r\n    \"system\":\"System\"\r\n}"
+        }
+    ]
+}

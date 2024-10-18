@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tody_app/bloc/login/login_notifier.dart';
 import 'package:tody_app/bloc/login/login_state.dart';
-import 'package:tody_app/core/app_colors.dart';
 import 'package:tody_app/core/constants/routes.dart';
 import 'package:tody_app/presentation/widgets/app_action_button.dart';
+import 'package:tody_app/core/theme/theme_ext.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -28,12 +28,8 @@ class _LoginPageState extends State<LoginPage> {
         final loginNotifier = context.read<LoginNotifier>();
         final loginState = loginNotifier.loginState;
         if (loginState is SuccessState) {
-          print('Succes');
-
           Navigator.of(context).pushReplacementNamed(EnumRoutes.home.path);
         } else if (loginState is ErrorState) {
-          print('Failed');
-
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(
@@ -50,9 +46,9 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     final loginState = context.watch<LoginNotifier>().loginState;
 
-    const border = OutlineInputBorder(
+    final border = OutlineInputBorder(
       borderSide: BorderSide(
-        color: AppColors.onPrimary,
+        color: context.colors.onPrimary,
       ),
     );
 
@@ -61,9 +57,14 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     return Scaffold(
+      backgroundColor: context.colors.surface,
       appBar: AppBar(
-        title: const Center(
-          child: Text('Login'),
+        backgroundColor: context.colors.surface,
+        title: Center(
+          child: Text(
+            'Login',
+            style: context.typography.displaySmall,
+          ),
         ),
       ),
       body: Padding(

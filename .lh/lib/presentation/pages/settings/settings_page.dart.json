@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/presentation/pages/settings/settings_page.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1729145594115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729146463645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   const SettingsPage({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container();\r\n+    return Scaffold();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729146634071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   const SettingsPage({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Scaffold();\r\n+    return Scaffold(backgroundColor: context.,);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729146688763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import 'package:flutter/material.dart';\r\n+import 'package:tody_app/core/theme/theme_ext.dart';\r\n \r\n class SettingsPage extends StatelessWidget {\r\n   const SettingsPage({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Scaffold(backgroundColor: context.,);\r\n+    return Scaffold(backgroundColor: context.colors.surface,);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729147177870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,10 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       backgroundColor: context.colors.surface,\r\n+      appBar: AppBar(\r\n+        title: Text(''),\r\n+      ),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729147187764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       backgroundColor: context.colors.surface,\r\n       appBar: AppBar(\r\n-        title: Text(''),\r\n+        title: Text('Settings'),\r\n       ),\r\n     );\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1729145594115,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass SettingsPage extends StatelessWidget {\r\n  const SettingsPage({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container();\r\n  }\r\n}\r\n"
+        }
+    ]
+}

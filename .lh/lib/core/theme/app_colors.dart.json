@@ -1,0 +1,42 @@
+{
+    "sourceFile": "lib/core/theme/app_colors.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1729017111199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729017119510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import 'package:flutter/material.dart';\r\n \r\n-interface class AppColors extends ThemeExtension {\r\n+interface class AppColors extends ThemeExtension <AppColors>{\r\n   const AppColors({\r\n     required this.surface,\r\n     required this.primary,\r\n     required this.onPrimary,\r\n"
+                },
+                {
+                    "date": 1729017340067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,10 @@\n   final Color onSurfaceMediumBrush;\r\n   final Color primaryInverse;\r\n }\r\n \r\n+ThemeExtension\r\n+\r\n class _AppLightColors implements AppColors {\r\n   @override\r\n   Color get error => const Color(0xFFF85977);\r\n \r\n"
+                },
+                {
+                    "date": 1729017358128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,10 +29,8 @@\n   final Color onSurfaceMediumBrush;\r\n   final Color primaryInverse;\r\n }\r\n \r\n-ThemeExtension\r\n-\r\n class _AppLightColors implements AppColors {\r\n   @override\r\n   Color get error => const Color(0xFFF85977);\r\n \r\n"
+                },
+                {
+                    "date": 1729017374644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,10 @@\n   final Color onSurfaceMediumBrush;\r\n   final Color primaryInverse;\r\n }\r\n \r\n+@override\r\n+\r\n class _AppLightColors implements AppColors {\r\n   @override\r\n   Color get error => const Color(0xFFF85977);\r\n \r\n"
+                },
+                {
+                    "date": 1729017384195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,10 @@\n   final Color primaryInverse;\r\n }\r\n \r\n @override\r\n+ThemeExtension\r\n+\r\n class _AppLightColors implements AppColors {\r\n   @override\r\n   Color get error => const Color(0xFFF85977);\r\n \r\n"
+                },
+                {
+                    "date": 1729017393429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n   final Color primaryInverse;\r\n }\r\n \r\n @override\r\n-ThemeExtension\r\n+ThemeExtension<AppColors>\r\n \r\n class _AppLightColors implements AppColors {\r\n   @override\r\n   Color get error => const Color(0xFFF85977);\r\n"
+                }
+            ],
+            "date": 1729017111199,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\ninterface class AppColors extends ThemeExtension {\r\n  const AppColors({\r\n    required this.surface,\r\n    required this.primary,\r\n    required this.onPrimary,\r\n    required this.onSurface,\r\n    required this.primaryVariant,\r\n    required this.error,\r\n    required this.onSurfaceMediumBrush,\r\n    required this.primaryInverse,\r\n  });\r\n\r\n  factory AppColors.light() {\r\n    return _AppLightColors();\r\n  }\r\n\r\n  factory AppColors.dark() {\r\n    return _AppDarkColors();\r\n  }\r\n\r\n  final Color surface;\r\n  final Color primary;\r\n  final Color onPrimary;\r\n  final Color onSurface;\r\n  final Color primaryVariant;\r\n  final Color error;\r\n  final Color onSurfaceMediumBrush;\r\n  final Color primaryInverse;\r\n}\r\n\r\nclass _AppLightColors implements AppColors {\r\n  @override\r\n  Color get error => const Color(0xFFF85977);\r\n\r\n  @override\r\n  Color get onPrimary => Colors.white;\r\n\r\n  @override\r\n  Color get onSurface => const Color(0xFF1C1B1F);\r\n\r\n  @override\r\n  Color get onSurfaceMediumBrush => const Color.fromRGBO(27, 28, 31, 0.6);\r\n\r\n  @override\r\n  Color get primary => const Color(0xFF5946D2);\r\n\r\n  @override\r\n  Color get primaryInverse => const Color(0xFFC8BFFF);\r\n\r\n  @override\r\n  Color get primaryVariant => const Color(0xFF5835E5);\r\n\r\n  @override\r\n  Color get surface => Colors.white;\r\n}\r\n\r\nclass _AppDarkColors implements AppColors {\r\n  @override\r\n  Color get error => const Color(0xFFD9415E);\r\n\r\n  @override\r\n  Color get onPrimary => Colors.white;\r\n\r\n  @override\r\n  Color get onSurface => const Color(0xFFE6E1E5);\r\n\r\n  @override\r\n  Color get onSurfaceMediumBrush => const Color.fromRGBO(230, 225, 229, 0.6);\r\n\r\n  @override\r\n  Color get primary => const Color(0xFF9373FF);\r\n\r\n  @override\r\n  Color get primaryInverse => const Color(0xFF5946D2);\r\n\r\n  @override\r\n  Color get primaryVariant => const Color(0xFFCBBEFF);\r\n\r\n  @override\r\n  Color get surface => const Color(0xFF201F24);\r\n}\r\n"
+        }
+    ]
+}

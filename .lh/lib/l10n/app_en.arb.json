@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/l10n/app_en.arb",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1729077976934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729077989773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n {\r\n     \"@@locale\":\"en\",\r\n     \"important\":\"Important\",\r\n     \"tasks\":\"Tasks\",\r\n-    \"light\":\"Light\"\r\n+    \"light\":\"Light\",\r\n+    \"dark\":\"Dark\"\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1729078006744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n     \"important\":\"Important\",\r\n     \"tasks\":\"Tasks\",\r\n     \"light\":\"Light\",\r\n     \"dark\":\"Dark\",\r\n-    \r\n+    \"system\":\"System\"\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1729147277238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+{\r\n+    \"@@locale\":\"en\",\r\n+    \"important\":\"Important\",\r\n+    \"tasks\":\"Tasks\",\r\n+    \"light\":\"Light\",\r\n+    \"dark\":\"Dark\",\r\n+    \"system\":\"System\",\r\n+    \"settings\":\"Settings\"\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1729077976934,
+            "name": "Commit-0",
+            "content": "{\r\n    \"@@locale\":\"en\",\r\n    \"important\":\"Important\",\r\n    \"tasks\":\"Tasks\",\r\n    \"light\":\"Light\"\r\n}"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "sourceFile": "lib/presentation/pages/settings/widgets/settings_bar.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1729149263219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729149294826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   const SettingsBar({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container();\r\n+    return Column();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729149305748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,9 @@\n   const SettingsBar({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Column();\r\n+    return Column(\r\n+      children: [Text(data)],\r\n+    );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729149355150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class SettingsBar extends StatelessWidget {\r\n+  const SettingsBar({super.key});\r\n+\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Column(\r\n+      children: [Text('Language')],\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1729149369120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,13 @@\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Column(\r\n-      children: [Text('Language')],\r\n+      children: [\r\n+        Text('Language'),\r\n+        Row(\r\n+          children: [],\r\n+        )\r\n+      ],\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729149426618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     return Column(\r\n       children: [\r\n         Text('Language'),\r\n         Row(\r\n-          children: [],\r\n+          children: [Text('Language'),Text('Language'),Text('Language')],\r\n         )\r\n       ],\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1729149529198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Column(\r\n+      crossAxisAlignment: CrossAxisAlignment.start,\r\n       children: [\r\n         Text('Language'),\r\n         Row(\r\n           children: [\r\n"
+                },
+                {
+                    "date": 1729149579585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,19 +4,23 @@\n   const SettingsBar({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Column(\r\n-      crossAxisAlignment: CrossAxisAlignment.start,\r\n-      children: [\r\n-        Text('Language'),\r\n-        Row(\r\n-          children: [\r\n-            Text('Language'),\r\n-            Text('Language'),\r\n-            Text('Language'),\r\n-          ],\r\n-        )\r\n-      ],\r\n+    return Padding(\r\n+      \r\n+      padding: const EdgeInsets.all(8.0),\r\n+      child: Column(\r\n+        crossAxisAlignment: CrossAxisAlignment.start,\r\n+        children: [\r\n+          Text('Language'),\r\n+          Row(\r\n+            children: [\r\n+              Text('Language'),\r\n+              Text('Language'),\r\n+              Text('Language'),\r\n+            ],\r\n+          )\r\n+        ],\r\n+      ),\r\n     );\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1729149263219,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass SettingsBar extends StatelessWidget {\r\n  const SettingsBar({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container();\r\n  }\r\n}"
+        }
+    ]
+}

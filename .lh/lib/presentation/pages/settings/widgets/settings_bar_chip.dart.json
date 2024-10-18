@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/presentation/pages/settings/widgets/settings_bar_chip.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1729150403099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729150475907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   const SettingsBarChip({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container();\r\n+    return Container(padding: EdgeInsets.symmetric(horizontal: 16,vertical: 6,),);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729150483435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container(\r\n-      padding: EdgeInsets.symmetric(\r\n+      padding:const EdgeInsets.symmetric(\r\n         horizontal: 16,\r\n         vertical: 6,\r\n       ),\r\n     );\r\n"
+                },
+                {
+                    "date": 1729150725112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,8 @@\n       padding: const EdgeInsets.symmetric(\r\n         horizontal: 16,\r\n         vertical: 6,\r\n       ),\r\n+      child: ,\r\n     );\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1729150403099,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass SettingsBarChip extends StatelessWidget {\r\n  const SettingsBarChip({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container();\r\n  }\r\n}\r\n"
+        }
+    ]
+}

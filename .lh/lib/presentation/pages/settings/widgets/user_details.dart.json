@@ -1,0 +1,74 @@
+{
+    "sourceFile": "lib/presentation/pages/settings/widgets/user_details.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1729261715532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729261740192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,8 @@\n+class name extends StatelessWidget {\r\n+  const name({super.key});\r\n \r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Container();\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1729261746475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import 'package:flutter/material.dart';\r\n+\r\n class name extends StatelessWidget {\r\n   const name({super.key});\r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1729261761195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import 'package:flutter/material.dart';\r\n \r\n-class name extends StatelessWidget {\r\n-  const name({super.key});\r\n+class UserDetails extends StatelessWidget {\r\n+  const UserDetails({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Container();\r\n"
+                },
+                {
+                    "date": 1729261778994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,52 @@\n   const UserDetails({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Container();\r\n+    return Center(\r\n+      child: Column(\r\n+        crossAxisAlignment: CrossAxisAlignment.center,\r\n+        children: [\r\n+          CircleAvatar(\r\n+            radius: 30,\r\n+            backgroundColor: context.colors.primary,\r\n+            child: Text(\r\n+              'FT',\r\n+              style: context.typography.titleLarge\r\n+                  .copyWith(color: context.colors.surface),\r\n+            ),\r\n+          ),\r\n+          const SizedBox(height: 12),\r\n+          Text(\r\n+            'Teymurov Fikrat',\r\n+            style: context.typography.titleLarge,\r\n+          ),\r\n+          Text(\r\n+            'fikrat.teymurov@gmail.com',\r\n+            style: context.typography.bodySmall\r\n+                .copyWith(color: context.colors.onSurfaceMediumBrush),\r\n+          ),\r\n+          const SizedBox(height: 12),\r\n+          TextButton(\r\n+            onPressed: () {\r\n+              Navigator.pushReplacementNamed(\r\n+                context,\r\n+                EnumRoutes.login.path,\r\n+              );\r\n+            },\r\n+            child: Text(\r\n+              'Sign out',\r\n+              style: context.typography.labelLarge\r\n+                  .copyWith(color: context.colors.error),\r\n+            ),\r\n+          ),\r\n+          const SizedBox(height: 13),\r\n+          Divider(\r\n+            thickness: 1,\r\n+            indent: 20,\r\n+            endIndent: 20,\r\n+          )\r\n+        ],\r\n+      ),\r\n+    );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1729261800878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n import 'package:flutter/material.dart';\r\n+import 'package:tody_app/core/constants/routes.dart';\r\n+import 'package:tody_app/core/theme/theme_ext.dart';\r\n \r\n class UserDetails extends StatelessWidget {\r\n   const UserDetails({super.key});\r\n \r\n"
+                },
+                {
+                    "date": 1729261863920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,11 @@\n   const UserDetails({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n+\r\n+final \r\n+\r\n     return Center(\r\n       child: Column(\r\n         crossAxisAlignment: CrossAxisAlignment.center,\r\n         children: [\r\n"
+                },
+                {
+                    "date": 1729261873646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,16 @@\n import 'package:flutter/material.dart';\r\n+import 'package:tody_app/bloc/user/user_notifier.dart';\r\n import 'package:tody_app/core/constants/routes.dart';\r\n import 'package:tody_app/core/theme/theme_ext.dart';\r\n \r\n class UserDetails extends StatelessWidget {\r\n   const UserDetails({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n+    final user = UserNotifier;\r\n \r\n-final \r\n-\r\n     return Center(\r\n       child: Column(\r\n         crossAxisAlignment: CrossAxisAlignment.center,\r\n         children: [\r\n"
+                },
+                {
+                    "date": 1729261896596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n import 'package:flutter/material.dart';\r\n import 'package:tody_app/bloc/user/user_notifier.dart';\r\n import 'package:tody_app/core/constants/routes.dart';\r\n import 'package:tody_app/core/theme/theme_ext.dart';\r\n+import 'package:tody_app/main.dart';\r\n \r\n class UserDetails extends StatelessWidget {\r\n   const UserDetails({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    final user = UserNotifier;\r\n+    final user = context.watch<UserNotifier>();\r\n \r\n     return Center(\r\n       child: Column(\r\n         crossAxisAlignment: CrossAxisAlignment.center,\r\n"
+                },
+                {
+                    "date": 1729261903624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:provider/provider.dart';\r\n import 'package:tody_app/bloc/user/user_notifier.dart';\r\n import 'package:tody_app/core/constants/routes.dart';\r\n import 'package:tody_app/core/theme/theme_ext.dart';\r\n import 'package:tody_app/main.dart';\r\n"
+                },
+                {
+                    "date": 1729261914533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   const UserDetails({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    final user = context.watch<UserNotifier>();\r\n+    final user = context.watch<UserNotifier>().user;\r\n \r\n     return Center(\r\n       child: Column(\r\n         crossAxisAlignment: CrossAxisAlignment.center,\r\n"
+                },
+                {
+                    "date": 1729262024347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \r\n     return Center(\r\n       child: Column(\r\n         crossAxisAlignment: CrossAxisAlignment.center,\r\n-        children: [\r\n+        children: [...[\r\n           CircleAvatar(\r\n             radius: 30,\r\n             backgroundColor: context.colors.primary,\r\n             child: Text(\r\n"
+                },
+                {
+                    "date": 1729262041452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n             'fikrat.teymurov@gmail.com',\r\n             style: context.typography.bodySmall\r\n                 .copyWith(color: context.colors.onSurfaceMediumBrush),\r\n           ),\r\n-          const SizedBox(height: 12),\r\n+          const SizedBox(height: 12),],\r\n           TextButton(\r\n             onPressed: () {\r\n               Navigator.pushReplacementNamed(\r\n                 context,\r\n"
+                },
+                {
+                    "date": 1729262067934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n     return Center(\r\n       child: Column(\r\n         crossAxisAlignment: CrossAxisAlignment.center,\r\n         children: [\r\n+          if(user!=null)\r\n           ...[\r\n             CircleAvatar(\r\n               radius: 30,\r\n               backgroundColor: context.colors.primary,\r\n"
+                },
+                {
+                    "date": 1729262099270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,13 +27,13 @@\n               ),\r\n             ),\r\n             const SizedBox(height: 12),\r\n             Text(\r\n-              'Teymurov Fikrat',\r\n+              user.fullName,\r\n               style: context.typography.titleLarge,\r\n             ),\r\n             Text(\r\n-              'fikrat.teymurov@gmail.com',\r\n+              user.username,\r\n               style: context.typography.bodySmall\r\n                   .copyWith(color: context.colors.onSurfaceMediumBrush),\r\n             ),\r\n             const SizedBox(height: 12),\r\n"
+                }
+            ],
+            "date": 1729261715532,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/core/utils/extension/context_ext.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1729147484081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729147540074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,6 @@\n+import 'package:flutter/services.dart';\r\n import 'package:flutter/widgets.dart';\r\n \r\n-extension ContextExt on BuildContext {}\r\n+extension ContextExt on BuildContext {\r\n+  ApplicationSwitcherDescription\r\n+}\r\n"
+                },
+                {
+                    "date": 1729147555043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-import 'package:flutter/services.dart';\r\n import 'package:flutter/widgets.dart';\r\n \r\n extension ContextExt on BuildContext {\r\n-  ApplicationSwitcherDescription\r\n+  Apploc\r\n }\r\n"
+                }
+            ],
+            "date": 1729147484081,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/widgets.dart';\r\n\r\nextension ContextExt on BuildContext{}"
+        }
+    ]
+}
